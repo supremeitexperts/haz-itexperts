@@ -25,6 +25,7 @@ export default function FABs({
         "Hi! I’d like to discuss Managed IT / Cybersecurity."
       )}`
     : "";
+  const hidePhone = site?.hidePhone;
 
   const btnBase =
     "grid place-items-center rounded-full shadow-lg focus:outline-none " +
@@ -55,15 +56,17 @@ export default function FABs({
       ) : null}
 
       {/* Call */}
-      <a
-        href={tel}
-        aria-label="Call us"
-        className={btnBase}
-        style={{ width: size, height: size, background: "#06b6d4" }}
-        onClick={() => track("call_click", { source, placement: "fab" })}
-      >
-        <Phone className="w-[18px] h-[18px] text-white" />
-      </a>
+      {!hidePhone ? (
+        <a
+          href={tel}
+          aria-label="Call us"
+          className={btnBase}
+          style={{ width: size, height: size, background: "#06b6d4" }}
+          onClick={() => track("call_click", { source, placement: "fab" })}
+        >
+          <Phone className="w-[18px] h-[18px] text-white" />
+        </a>
+      ) : null}
     </div>
   );
 }

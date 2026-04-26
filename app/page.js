@@ -221,6 +221,7 @@ export default function HomePage() {
 
   const phoneRaw = site?.phone || "+1 610-500-9209";
   const phoneTel = `tel:${String(phoneRaw).replace(/[^\d+]/g, "")}`;
+  const hidePhone = site?.hidePhone;
 
   const SERVICES = [
     {
@@ -404,17 +405,19 @@ export default function HomePage() {
                 Pricing &amp; Quote
               </Link>
 
-              <a
-                href={phoneTel}
-                className="rounded-xl px-5 py-3 font-semibold bg-white/5 ring-1 ring-white/10 hover:bg-white/10 transition inline-flex items-center justify-center gap-2"
-              >
-                <Phone className="h-4 w-4" />
-                Call Now
-              </a>
+              {!hidePhone ? (
+                <a
+                  href={phoneTel}
+                  className="rounded-xl px-5 py-3 font-semibold bg-white/5 ring-1 ring-white/10 hover:bg-white/10 transition inline-flex items-center justify-center gap-2"
+                >
+                  <Phone className="h-4 w-4" />
+                  Call Now
+                </a>
+              ) : null}
             </div>
 
             <div className="mt-3 text-xs text-slate-400">
-              No pressure — quick 15-min call to map risks + next steps.
+              {hidePhone ? "No pressure — quick 15-min assessment to map risks + next steps." : "No pressure — quick 15-min call to map risks + next steps."}
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-6">
@@ -777,13 +780,15 @@ export default function HomePage() {
                 {site?.cta || "Get a Free IT Assessment"} <ArrowRight className="h-4 w-4" />
               </Link>
 
-              <a
-                href={phoneTel}
-                className="inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 font-semibold bg-white/5 ring-1 ring-white/10 hover:bg-white/10 transition"
-              >
-                <Phone className="h-4 w-4" />
-                Call Now
-              </a>
+              {!hidePhone ? (
+                <a
+                  href={phoneTel}
+                  className="inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 font-semibold bg-white/5 ring-1 ring-white/10 hover:bg-white/10 transition"
+                >
+                  <Phone className="h-4 w-4" />
+                  Call Now
+                </a>
+              ) : null}
 
               <Link
                 href="/get-quote"

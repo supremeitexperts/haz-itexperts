@@ -24,6 +24,7 @@ export default function OfferPopup() {
 
   const source = "offer_popup";
   const phone = site?.phone || "+1 610-500-9209";
+  const hidePhone = site?.hidePhone;
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -191,15 +192,16 @@ export default function OfferPopup() {
   Claim Free Audit
 </Link>
 
-                    {/* ✅ Tracked Call */}
-                    <TrackedPhoneLink
-                      phone={phone}
-                      source={source}
-                      className="rounded-lg px-5 py-3 text-sm font-semibold bg-white/10 ring-1 ring-white/20 hover:bg-white/20 inline-flex items-center justify-center gap-2"
-                    >
-                      <Phone className="h-4 w-4" />
-                      Call {phone}
-                    </TrackedPhoneLink>
+                    {!hidePhone ? (
+                      <TrackedPhoneLink
+                        phone={phone}
+                        source={source}
+                        className="rounded-lg px-5 py-3 text-sm font-semibold bg-white/10 ring-1 ring-white/20 hover:bg-white/20 inline-flex items-center justify-center gap-2"
+                      >
+                        <Phone className="h-4 w-4" />
+                        Call {phone}
+                      </TrackedPhoneLink>
+                    ) : null}
                   </div>
 
                   <div className="mt-6 flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.04] p-3">

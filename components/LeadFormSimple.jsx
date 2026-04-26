@@ -32,6 +32,7 @@ export default function LeadFormSimple({
   className = "",
   defaultSubject = "Website Contact",
 }) {
+  const hidePhone = site?.hidePhone;
   const email = site?.email ?? "support@supremeitexperts.com";
   const phone = site?.phone ?? "+1 610-500-9209";
   const telE164 = cleanTel(phone);
@@ -170,7 +171,7 @@ export default function LeadFormSimple({
               >
                 <Mail className="h-4 w-4" /> Email us
               </a>
-              {telE164 ? (
+              {!hidePhone && telE164 ? (
                 <a
                   href={`tel:${telE164}`}
                   className="rounded-lg px-4 py-2 text-sm bg-white/10 ring-1 ring-white/20 hover:bg-white/20 inline-flex items-center gap-2"
@@ -244,16 +245,18 @@ export default function LeadFormSimple({
               {errors.workEmail ? <p className="mt-1 text-xs text-red-400">{errors.workEmail}</p> : null}
             </div>
 
-            <div>
-              <label className="text-xs text-slate-400">Phone (optional)</label>
-              <input
-                className="mt-1 w-full rounded-lg bg-transparent border border-white/20 focus:border-cyan-300/50 px-3 py-2 text-sm outline-none"
-                value={form.phone}
-                onChange={(e) => update("phone", e.target.value)}
-                placeholder="e.g. +1 (610) 555-1234"
-                autoComplete="tel"
-              />
-            </div>
+            {!hidePhone ? (
+              <div>
+                <label className="text-xs text-slate-400">Phone (optional)</label>
+                <input
+                  className="mt-1 w-full rounded-lg bg-transparent border border-white/20 focus:border-cyan-300/50 px-3 py-2 text-sm outline-none"
+                  value={form.phone}
+                  onChange={(e) => update("phone", e.target.value)}
+                  placeholder="e.g. +1 (610) 555-1234"
+                  autoComplete="tel"
+                />
+              </div>
+            ) : null}
           </div>
 
           <div>

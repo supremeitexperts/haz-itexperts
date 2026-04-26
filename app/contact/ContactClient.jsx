@@ -23,7 +23,8 @@ function cx(...a) {
 export default function ContactClient({ source = "contact-page", mode = "full" }) {
   const brand = site?.name || "Supreme IT Experts";
   const email = site?.email || "support@supremeitexperts.com";
-  const phoneRaw = site?.phone || "+1 610-500-9209";
+  const hidePhone = site?.hidePhone;
+  const phoneRaw = site?.phone || "+1 484-581-9691";
   const whatsappRaw = site?.whatsapp || phoneRaw;
 
   const phoneTel = `tel:${String(phoneRaw).replace(/[^\d+]/g, "")}`;
@@ -87,13 +88,15 @@ export default function ContactClient({ source = "contact-page", mode = "full" }
             {site?.cta || "Get a Free IT Assessment"} <ArrowRight className="h-4 w-4" />
           </Link>
 
-          <a
-            href={phoneTel}
-            className="rounded-lg px-4 py-2.5 text-sm font-semibold border border-white/10 bg-white/5 hover:bg-white/10 inline-flex items-center justify-center gap-2"
-          >
-            <Phone className="h-4 w-4 text-cyan-300" />
-            Call Now
-          </a>
+          {!hidePhone ? (
+            <a
+              href={phoneTel}
+              className="rounded-lg px-4 py-2.5 text-sm font-semibold border border-white/10 bg-white/5 hover:bg-white/10 inline-flex items-center justify-center gap-2"
+            >
+              <Phone className="h-4 w-4 text-cyan-300" />
+              Call Now
+            </a>
+          ) : null}
 
           <a
             href={waHref}
@@ -127,9 +130,11 @@ export default function ContactClient({ source = "contact-page", mode = "full" }
         </div>
 
         <div className="mt-3 text-xs text-slate-400">
-          Call: <span className="text-slate-200">{phoneRaw}</span> • WhatsApp:{" "}
-          <span className="text-slate-200">{whatsappRaw}</span> • Email:{" "}
-          <span className="text-slate-200">{email}</span>
+          {!hidePhone ? (
+            <>Call: <span className="text-slate-200">{phoneRaw}</span> • WhatsApp: <span className="text-slate-200">{whatsappRaw}</span> • Email: <span className="text-slate-200">{email}</span></>
+          ) : (
+            <>WhatsApp: <span className="text-slate-200">{whatsappRaw}</span> • Email: <span className="text-slate-200">{email}</span></>
+          )}
         </div>
       </section>
 
@@ -201,13 +206,15 @@ export default function ContactClient({ source = "contact-page", mode = "full" }
               Free Assessment <ArrowRight className="h-4 w-4" />
             </Link>
 
-            <a
-              href={phoneTel}
-              className="w-full md:w-auto inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold border border-white/10 bg-white/5 hover:bg-white/10 transition"
-            >
-              <Phone className="h-4 w-4 text-cyan-300" />
-              Call Now
-            </a>
+            {!hidePhone ? (
+              <a
+                href={phoneTel}
+                className="w-full md:w-auto inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold border border-white/10 bg-white/5 hover:bg-white/10 transition"
+              >
+                <Phone className="h-4 w-4 text-cyan-300" />
+                Call Now
+              </a>
+            ) : null}
 
             <a
               href={waHref}

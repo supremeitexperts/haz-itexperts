@@ -37,6 +37,7 @@ const TextArea = ({ error, className, ...props }) => (
 export default function QuoteFormClient({ source = "get-quote-page" }) {
   const email = site?.email ?? "support@supremeitexperts.com";
   const phone = site?.phone ?? "+1 610-500-9209";
+  const hidePhone = site?.hidePhone;
 
   const pageCtx = () => {
     if (typeof window === "undefined") return { source };
@@ -177,17 +178,19 @@ export default function QuoteFormClient({ source = "get-quote-page" }) {
           </p>
 
           {/* ✅ trust/CTA line (tracked + no raw tel href) */}
-          <div className="mt-3 text-xs text-slate-400">
-            Or call us:{" "}
-            <TrackedPhoneLink
-              phone={phone}
-              source={source}
-              placement="quote_trust_line"
-              className="text-cyan-300 hover:underline"
-            >
-              {phone}
-            </TrackedPhoneLink>
-          </div>
+          {!hidePhone ? (
+            <div className="mt-3 text-xs text-slate-400">
+              Or call us:{" "}
+              <TrackedPhoneLink
+                phone={phone}
+                source={source}
+                placement="quote_trust_line"
+                className="text-cyan-300 hover:underline"
+              >
+                {phone}
+              </TrackedPhoneLink>
+            </div>
+          ) : null}
         </div>
 
         <form onSubmit={onSubmit} className="space-y-5">
@@ -235,14 +238,16 @@ export default function QuoteFormClient({ source = "get-quote-page" }) {
               {errors.workEmail && <p className="mt-1 text-xs text-red-400">{errors.workEmail}</p>}
             </div>
 
-            <div>
-              <label className="text-xs text-slate-400">Phone (optional)</label>
-              <Input
-                placeholder="e.g. +1 (610) 555-1234"
-                value={form.phone}
-                onChange={(e) => updateField("phone", e.target.value)}
-              />
-            </div>
+            {!hidePhone ? (
+              <div>
+                <label className="text-xs text-slate-400">Phone (optional)</label>
+                <Input
+                  placeholder="e.g. +1 (610) 555-1234"
+                  value={form.phone}
+                  onChange={(e) => updateField("phone", e.target.value)}
+                />
+              </div>
+            ) : null}
           </div>
 
           <div className="grid md:grid-cols-3 gap-4">

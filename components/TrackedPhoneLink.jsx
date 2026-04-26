@@ -1,6 +1,7 @@
 "use client";
 
 import { track } from "@/lib/track";
+import { site } from "@/lib/siteConfig";
 
 export default function TrackedPhoneLink({
   phone,
@@ -17,6 +18,7 @@ export default function TrackedPhoneLink({
     .replace(/[^\d+]/g, "");
 
   const finalHref = phoneHref ? `tel:${phoneHref}` : "#";
+  if (site?.hidePhone) return null;
 
   return (
     <a

@@ -56,6 +56,7 @@ export default function Footer({ className = "" }) {
   const email = site?.email || "support@supremeitexperts.com";
 
   // ✅ Phones: US default, UK override (only if UK enabled + on UK route)
+  const hidePhone = site?.hidePhone;
   const usPhoneRaw = site?.phone || "+1 610-500-9209";
   const ukPhoneRaw = "+92 305 5249093";
 
@@ -102,16 +103,20 @@ export default function Footer({ className = "" }) {
                 {email}
               </TrackedEmailLink>
 
-              <span className="hidden sm:inline-block h-1 w-1 rounded-full bg-slate-500/70" />
+              {!hidePhone ? (
+                <>
+                  <span className="hidden sm:inline-block h-1 w-1 rounded-full bg-slate-500/70" />
 
-              <TrackedPhoneLink
-                phone={phoneE164 || phoneRaw}
-                source="footer"
-                placement={isUk ? "footer_phone_uk" : "footer_phone_us"}
-                className="text-slate-200 hover:text-cyan-300 transition whitespace-nowrap"
-              >
-                {phoneRaw}
-              </TrackedPhoneLink>
+                  <TrackedPhoneLink
+                    phone={phoneE164 || phoneRaw}
+                    source="footer"
+                    placement={isUk ? "footer_phone_uk" : "footer_phone_us"}
+                    className="text-slate-200 hover:text-cyan-300 transition whitespace-nowrap"
+                  >
+                    {phoneRaw}
+                  </TrackedPhoneLink>
+                </>
+              ) : null}
             </div>
 
             <div className="text-xs text-slate-200">{hoursText}</div>
