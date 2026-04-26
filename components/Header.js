@@ -91,7 +91,7 @@ export default function Header({ className = "" }) {
 
   return (
     <header
-      className={`site-header sticky top-0 z-[100] border-b border-white/10 bg-[#0b1220]/85 backdrop-blur ${className}`}
+      className={`site-header sticky top-0 z-[100] border-b border-white/10 bg-slate-950/95 backdrop-blur-xl ${className}`}
     >
       <div className="h-[2px] bg-gradient-to-r from-cyan-500/50 via-fuchsia-500/40 to-cyan-500/50" />
 
@@ -204,11 +204,11 @@ export default function Header({ className = "" }) {
 
           <label
             htmlFor="nav-toggle"
-            className="fixed inset-0 z-40 bg-black/50 opacity-0 pointer-events-none peer-checked:opacity-100 peer-checked:pointer-events-auto transition lg:hidden"
+            className="fixed inset-0 z-40 bg-black/80 backdrop-blur-xl opacity-0 pointer-events-none peer-checked:opacity-100 peer-checked:pointer-events-auto transition lg:hidden"
           />
 
-          <div className="fixed right-0 top-0 z-50 h-full w-[82%] max-w-xs bg-[#0e1628] border-l border-white/10 translate-x-full peer-checked:translate-x-0 transition lg:hidden">
-            <div className="p-6">
+          <div className="fixed right-0 top-0 z-50 h-auto w-[82%] max-w-xs bg-slate-950 border-l border-white/10 shadow-2xl shadow-black/50 translate-x-full peer-checked:translate-x-0 transition lg:hidden">
+            <div className="p-6 bg-slate-950">
               <div className="flex items-center justify-between">
                 <Link href={brandHref} className="font-semibold text-slate-100" aria-label="Go to homepage">
                   <BrandLogo size={26} className="translate-y-[1px]" />
@@ -228,14 +228,14 @@ export default function Header({ className = "" }) {
               <div className="mt-4 grid gap-2">
                 <Link
                   href={ctaHref}
-                  className="rounded-lg px-4 py-3 text-sm font-semibold border border-cyan-300/30 text-cyan-300 bg-cyan-400/10 hover:bg-cyan-400/20 transition text-center"
+                  className="rounded-2xl px-4 py-3 text-sm font-semibold border border-cyan-300/30 text-cyan-300 bg-cyan-400/10 hover:bg-cyan-400/20 transition text-center"
                 >
                   {ctaText}
                 </Link>
 
                 <Link
                   href={quoteHref}
-                  className="rounded-lg px-4 py-3 text-sm font-semibold border border-white/10 bg-white/0 hover:bg-white/5 text-slate-100 transition text-center"
+                  className="rounded-2xl px-4 py-3 text-sm font-semibold border border-white/10 bg-white/5 hover:bg-white/10 text-slate-100 transition text-center"
                 >
                   {quoteText}
                 </Link>
@@ -260,8 +260,10 @@ export default function Header({ className = "" }) {
                     <Link
                       key={l.href}
                       href={l.href}
-                      className={`rounded-lg px-3 py-2 transition ${
-                        active ? "text-cyan-300 bg-cyan-400/10" : "text-slate-200 hover:bg-white/5 hover:text-cyan-300"
+                      className={`rounded-2xl px-3 py-3 text-sm font-medium transition ${
+                        active
+                          ? "text-cyan-300 bg-cyan-400/10"
+                          : "text-slate-200 hover:bg-white/5 hover:text-cyan-300"
                       }`}
                     >
                       {l.label}

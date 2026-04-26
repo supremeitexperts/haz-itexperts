@@ -393,14 +393,14 @@ export default function HomePage() {
             <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3">
               <Link
                 href={site?.assessmentHref || "/lp/allentown#claim"}
-                className="rounded-xl px-5 py-3 font-semibold border border-cyan-300/30 text-cyan-300 bg-cyan-400/10 hover:bg-cyan-400/20 transition text-center"
+                className="inline-flex items-center justify-center rounded-xl px-5 py-3 font-semibold border border-cyan-300/30 text-cyan-300 bg-cyan-400/10 hover:bg-cyan-400/20 transition text-center"
               >
                 {site?.cta || "Get a Free IT Assessment"}
               </Link>
 
               <Link
                 href="/get-quote"
-                className="rounded-xl px-5 py-3 font-semibold bg-white/5 ring-1 ring-white/10 hover:bg-white/10 transition text-center"
+                className="inline-flex items-center justify-center rounded-xl px-5 py-3 font-semibold bg-white/5 ring-1 ring-white/10 hover:bg-white/10 transition text-center"
               >
                 Pricing &amp; Quote
               </Link>
