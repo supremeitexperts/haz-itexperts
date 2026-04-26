@@ -228,6 +228,7 @@ export default function Header({ className = "" }) {
               <div className="mt-4 grid gap-2">
                 <Link
                   href={ctaHref}
+                  onClick={() => document.getElementById('nav-toggle').checked = false}
                   className="rounded-2xl px-4 py-3 text-sm font-semibold border border-cyan-300/30 text-cyan-300 bg-cyan-400/10 hover:bg-cyan-400/20 transition text-center"
                 >
                   {ctaText}
@@ -235,6 +236,7 @@ export default function Header({ className = "" }) {
 
                 <Link
                   href={quoteHref}
+                  onClick={() => document.getElementById('nav-toggle').checked = false}
                   className="rounded-2xl px-4 py-3 text-sm font-semibold border border-white/10 bg-white/5 hover:bg-white/10 text-slate-100 transition text-center"
                 >
                   {quoteText}
@@ -245,6 +247,7 @@ export default function Header({ className = "" }) {
                 <div className="mt-4">
                   <Link
                     href={regionSwitchHref}
+                    onClick={() => document.getElementById('nav-toggle').checked = false}
                     className="rounded-lg px-3 py-2 text-sm font-semibold border border-white/10 bg-white/5 hover:bg-white/10 text-slate-100 transition inline-flex"
                     aria-label={regionSwitchTitle}
                   >
@@ -260,6 +263,7 @@ export default function Header({ className = "" }) {
                     <Link
                       key={l.href}
                       href={l.href}
+                      onClick={() => document.getElementById('nav-toggle').checked = false}
                       className={`rounded-2xl px-3 py-3 text-sm font-medium transition ${
                         active
                           ? "text-cyan-300 bg-cyan-400/10"
