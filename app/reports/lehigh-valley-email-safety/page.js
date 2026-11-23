@@ -166,7 +166,7 @@ export default function LehighValleyEmailSafetyReport() {
           <p>
             Every business domain can publish a short public instruction called DMARC. It tells Gmail, Outlook and every
             other mail server what to do with an email that claims to be from that business but was not sent by it. With
-            “reject” the fake is blocked. With no record, a broken record or “p=none”, the fake is delivered.
+            “reject” the fake is blocked. With no record, a broken record or “p=none”, nothing tells the receiving server to stop it, so it is often delivered.
           </p>
           <p>
             So for {pct(IMPERSONABLE, TOTAL)}% of the local businesses we checked, a scammer can put the business’s own
