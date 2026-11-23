@@ -62,9 +62,9 @@ const REGIONS = [
     name: "Allentown, Macungie & Emmaus, PA",
     color: "#34d399",
     cities: [
-      { name: "Allentown, PA", slug: "allentown-pa", tier: "A", sla: "Onsite visits", pin: [60, 34] },
-      { name: "Macungie, PA", slug: "macungie-pa", tier: "A", sla: "Onsite visits", pin: [62, 36] },
-      { name: "Emmaus, PA", slug: "emmaus-pa", tier: "A", sla: "Onsite visits", pin: [61, 35] },
+      { name: "Allentown, PA", slug: "allentown-pa", tier: "A", sla: "Next-day answer", pin: [60, 34] },
+      { name: "Macungie, PA", slug: "macungie-pa", tier: "A", sla: "Next-day answer", pin: [62, 36] },
+      { name: "Emmaus, PA", slug: "emmaus-pa", tier: "A", sla: "Next-day answer", pin: [61, 35] },
     ],
   },
 ];
