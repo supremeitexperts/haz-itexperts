@@ -38,7 +38,7 @@ export async function generateMetadata() {
   const fullTitle = `${baseTitle} | Managed IT & Cybersecurity — ${brand}`;
 
   const description =
-    "Fast, friendly managed IT services, 24/7 helpdesk and cybersecurity for small businesses in Allentown, Macungie & Emmaus, PA. Monitoring, patching, cloud, backup/DR and fixed-fee support.";
+    "Fast, friendly managed IT services, helpdesk and cybersecurity for small businesses in Allentown, Macungie & Emmaus, PA. Monitoring, patching, cloud, backup/DR and fixed-fee support.";
 
   return {
     metadataBase: new URL(baseUrl),
@@ -57,9 +57,9 @@ export async function generateMetadata() {
       "cybersecurity Allentown PA",
       "cybersecurity Macungie PA",
       "cybersecurity Emmaus PA",
-      "24/7 helpdesk Allentown",
-      "24/7 helpdesk Macungie",
-      "24/7 helpdesk Emmaus",
+      "IT helpdesk Allentown",
+      "IT helpdesk Macungie",
+      "IT helpdesk Emmaus",
       "backup and disaster recovery Allentown",
       "Microsoft 365 support Allentown",
     ],
@@ -383,7 +383,7 @@ export default function HomePage() {
 
             <p className="mt-4 text-sm md:text-base text-slate-300">
               {brand} helps small and mid-sized businesses reduce downtime with proactive monitoring, patching,
-              practical security, and clear SLAs — remote-first with onsite help when needed across Allentown, Macungie
+              practical security, and clear written terms — remote-first with onsite help when needed across Allentown, Macungie
               and Emmaus.
             </p>
 
@@ -391,7 +391,7 @@ export default function HomePage() {
               <Pill href="/locations/allentown-pa">Allentown IT support</Pill>
               <Pill href="/locations/macungie-pa">Macungie IT support</Pill>
               <Pill href="/locations/emmaus-pa">Emmaus IT support</Pill>
-              <Pill href="/locations/broomall-pa">Broomall &amp; Delaware County</Pill>
+              <Pill href="/reports/lehigh-valley-email-safety">Lehigh Valley Email Safety Report</Pill>
               <Pill href="/services/managed-it">Managed IT</Pill>
               <Pill href="/services/cybersecurity">Cybersecurity</Pill>
               <Pill href="/services/ai-workflows">New: AI Workflows</Pill>
@@ -424,12 +424,12 @@ export default function HomePage() {
             </div>
 
             <div className="mt-3 text-xs text-slate-400">
-              {hidePhone ? "No pressure — quick 15-min assessment to map risks + next steps." : "No pressure — quick 15-min call to map risks + next steps."}
+              {hidePhone ? "No pressure — free 30-minute IT + AI Checkup to map risks + next steps." : "No pressure — free 30-minute call to map risks + next steps."}
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-6">
-              <Stat k="<15 min" v="P1 response target" />
-              <Stat k="24/7" v="Helpdesk & monitoring" />
+              <Stat k="Next day" v="Answer by the next business day" />
+              <Stat k="Remote" v="Help sessions, weekday afternoons" />
               <Stat k="Onsite" v="Allentown + nearby" />
             </div>
 
@@ -773,10 +773,10 @@ export default function HomePage() {
 
       {/* TRUST */}
       <Section id="trust" className="py-12 md:py-14">
-        <Title k="Trust" sub="Security-first and SLA-backed" />
+        <Title k="Trust" sub="Security-first, with clear written terms" />
         <div className="grid md:grid-cols-3 gap-4">
           {[
-            ["SLA", "P1 response target, clear escalation, and same-day handling for most issues"],
+            ["Response", "Every request answered by the next business day, in writing"],
             ["Coverage", "Endpoint baselines plus monitored systems and reporting leadership reads"],
             ["Backups", "Backup planning, tested restores, and disaster recovery readiness"],
           ].map(([t, d]) => (

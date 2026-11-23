@@ -2,8 +2,8 @@
 import * as Accordion from "@radix-ui/react-accordion";
 const faqs=[
   {q:"Fully-managed vs Co-managed IT?",a:"Fully-managed: we run helpdesk, monitoring, security end-to-end. Co-managed: we augment your in-house IT."},
-  {q:"Response SLAs?",a:"P1 ≤ 15 min · P2 ≤ 1 hr · P3 same business day."},
-  {q:"Minimum users?",a:"Typically 10+ users; smaller teams on review."},
+  {q:"How fast do you answer?",a:"Every request, by phone or email, is answered by the next business day. Remote sessions are scheduled on weekday afternoons."},
+  {q:"Minimum users?",a:"None. SupremeCare SOHO covers 1 to 9 people; SupremeCare covers 10 to 50."},
   {q:"Tooling included?",a:"Yes—EDR/XDR, patching, monitoring, email security, backup/DR."},
   {q:"Contract terms?",a:"Monthly (30-day cancellation) or annual discounts."},
 ];

@@ -12,7 +12,7 @@ import { BASE_URL, BUSINESS_ID, uniq } from "@/lib/seoIds";
 
 const BRAND = site?.name || "Supreme IT Experts";
 const DEFAULT_DESC =
-  "Managed IT for SMBs in Allentown, Macungie & Emmaus: 24/7 helpdesk, device management, cybersecurity & backups — fixed monthly fee.";
+  "Managed IT for SMBs in Allentown, Macungie & Emmaus: remote and onsite helpdesk, device management, cybersecurity & backups — fixed monthly fee.";
 
 const OG_IMAGE = new URL("/og-image.png?v=7", BASE_URL).toString();
 

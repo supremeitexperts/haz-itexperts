@@ -293,7 +293,7 @@ export default function QuoteFormClient({ source = "get-quote-page" }) {
             <label className="text-xs text-slate-400">What would you like us to cover in the quote?</label>
             <TextArea
               rows={5}
-              placeholder="Example: Fully managed IT + security for ~40 staff across 2 offices. Include options for 24/7 support and backup/DR."
+              placeholder="Example: Fully managed IT + security for ~40 staff across 2 offices. Include options for extended-hours support and backup/DR."
               value={form.message}
               onChange={(e) => updateField("message", e.target.value)}
               error={!!errors.message}

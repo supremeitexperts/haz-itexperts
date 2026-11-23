@@ -121,7 +121,7 @@ export default function Page() {
     },
 
     stats: [
-      { kpi: "Fast", label: "P1 response targets" },
+      { kpi: "Next day", label: "Answer by the next business day" },
       { kpi: "Stable", label: "Patch & baseline cadence" },
       { kpi: "Clear", label: "KPIs for leadership" },
       { kpi: "30 days", label: "Typical stabilization sprint" },

@@ -282,8 +282,8 @@ export default async function ServicesPage() {
       a: "We can run IT end-to-end or support your in-house team. Tooling, access, and SOPs are aligned either way.",
     },
     {
-      q: "How do SLAs work?",
-      a: "We define priorities (P1/P2/P3), response targets, and escalation. You also get regular KPI reporting.",
+      q: "How fast do you respond?",
+      a: "Every request is answered by the next business day, and the agreement says in writing what is covered. You also get regular reporting.",
     },
     {
       q: "Can we start small and add modules?",
@@ -524,7 +524,7 @@ export default async function ServicesPage() {
                   href="/contact?type=assessment&source=services-areas"
                   className="inline-flex items-center gap-2 text-sm rounded-lg px-3 py-2 border border-cyan-300/30 text-cyan-300 bg-cyan-400/10 hover:bg-cyan-400/20"
                 >
-                  Book a 20-min Assessment <ArrowRight className="h-4 w-4" />
+                  Book the free 30-min Checkup <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
             </div>

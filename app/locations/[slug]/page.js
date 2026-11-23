@@ -247,7 +247,7 @@ export async function generateMetadata({ params }) {
   const title = `Managed IT Services ${loc.city}, ${loc.state} | Help Desk + Cybersecurity — ${brand}`;
   const description =
     `Need business IT support in ${loc.city}, ${loc.state}? Managed IT, help desk, cybersecurity, Microsoft 365, backups & disaster recovery. ` +
-    `Book a free 20-min IT assessment.`;
+    `Book a free 30-minute IT + AI Checkup.`;
 
   return {
     metadataBase: new URL(baseUrl),
@@ -504,7 +504,7 @@ export default async function LocationPage({ params }) {
               href={bookHref(`location-intent-${loc.slug}`)}
               className="underline decoration-dotted underline-offset-2 hover:text-cyan-300"
             >
-              Get a free 20-min assessment
+              Get the free 30-min Checkup
             </Link>{" "}
             or browse{" "}
             <Link
@@ -582,7 +582,7 @@ export default async function LocationPage({ params }) {
                 href={bookHref(`location-${loc.slug}`)}
                 className="rounded-xl px-5 py-3 font-semibold border border-cyan-300/30 text-cyan-300 bg-cyan-400/10 hover:bg-cyan-400/20"
               >
-                Free 20-min assessment
+                Free 30-min Checkup
               </Link>
               <Link
                 href="/contact"
@@ -613,7 +613,7 @@ export default async function LocationPage({ params }) {
                   href={bookHref(`location-${loc.slug}`)}
                   className="inline-flex items-center gap-2 text-sm rounded-lg px-3 py-2 border border-cyan-300/30 text-cyan-300 bg-cyan-400/10 hover:bg-cyan-400/20"
                 >
-                  {loc?.copy?.primaryCtaText || "Free 20-min IT assessment"} <ArrowRight className="h-4 w-4" />
+                  {loc?.copy?.primaryCtaText || "Free 30-min IT + AI Checkup"} <ArrowRight className="h-4 w-4" />
                 </Link>
 
                 <Link

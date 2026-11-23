@@ -40,7 +40,7 @@ const INTENTS = [
     test:
       /(service|msp|managed it|cyber|security|edr|xdr|backup|o365|m365|email|cloud|vcio|helpdesk)/i,
     respond: () =>
-      "We provide Managed IT, 24/7 helpdesk, EDR/XDR, email security, backup/DR, vCIO, and cloud. Do you want a quick overview PDF or a custom quote?",
+      "We provide Managed IT, helpdesk, EDR/XDR, email security, backup/DR, vCIO, and cloud. Do you want a quick overview PDF or a custom quote?",
     suggestions: ["Get a quote", "Talk to support", "Security stack"],
   },
   {
@@ -54,7 +54,7 @@ const INTENTS = [
     key: "support",
     test: /(support|helpdesk|issue|ticket|problem|down|outage)/i,
     respond: () =>
-      "Our helpdesk is 24/7. P1 response ≤ 15 min. Want me to raise a ticket or route you to an engineer?",
+      "Send us the problem by phone or email and we answer by the next business day. Want me to raise a ticket?",
     suggestions: ["Open a ticket", "Speak to engineer", "SLA details"],
     next: "lead_confirm_support",
   },

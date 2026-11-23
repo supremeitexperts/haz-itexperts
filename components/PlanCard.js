@@ -1,6 +1,6 @@
 export default function PlanCard(){
   const items=[
-    "24/7 Helpdesk (P1 ≤ 15 min response)",
+    "Helpdesk (every request answered by the next business day)",
     "Patch & Update Management (OS & apps)",
     "Endpoint Security (EDR/XDR + Ransomware protection)",
     "Email Security (MFA/SSO, phishing defense)",

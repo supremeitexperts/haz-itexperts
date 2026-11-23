@@ -109,7 +109,7 @@ export default function Page() {
         href: `/locations/${x.slug}`,
       })),
       cta1: { label: "View all areas", href: "/areas" },
-      cta2: { label: "Book a 20-min assessment", href: "/contact?type=assessment&source=cloud-workspace" },
+      cta2: { label: "Book the free 30-min Checkup", href: "/contact?type=assessment&source=cloud-workspace" },
     },
 
     stats: [

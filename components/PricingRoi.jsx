@@ -175,7 +175,7 @@ export default function PricingRoi() {
 
           <Pill>
             <LineChart className="h-4 w-4 text-cyan-300" aria-hidden="true" />
-            Productivity: <strong className="ms-1">↓ P1 to ≤15 min</strong>
+            Productivity: <strong className="ms-1">fewer repeat issues</strong>
           </Pill>
         </div>
       </div>
