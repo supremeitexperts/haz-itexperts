@@ -246,7 +246,7 @@ export default function LehighValleyEmailSafetyReport() {
           <h2 className="text-2xl md:text-3xl font-extrabold">For reporters, chambers and associations</h2>
           <p className="mt-3 text-slate-300 max-w-3xl">
             You are welcome to quote these numbers with a link to this page. For the full method, or a short interview
-            with Muhammad Barkat about what local businesses can do about it, write to{" "}
+            with our founder about what local businesses can do about it, write to{" "}
             <a className="text-cyan-300 underline" href="mailto:support@supremeitexperts.com?subject=Lehigh%20Valley%20Email%20Safety%20Report">
               support@supremeitexperts.com
             </a>

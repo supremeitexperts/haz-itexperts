@@ -148,7 +148,7 @@ export default function AllentownLP() {
 
                 <div className="min-w-0">
                   <div className="flex items-center gap-2">
-                    <div className="font-semibold truncate">Muhammad Barkat Saifee</div>
+                    <div className="font-semibold truncate">Our founder</div>
 
                     <span className="inline-flex items-center gap-1 rounded-full border border-white/10 bg-white/5 px-2 py-0.5 text-[11px] text-slate-200">
                       <BadgeCheck className="h-4 w-4 text-cyan-300" />
