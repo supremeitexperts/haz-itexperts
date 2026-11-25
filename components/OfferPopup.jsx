@@ -213,7 +213,7 @@ export default function OfferPopup() {
                       )}
                     </div>
                     <div className="text-xs">
-                      <div className="font-semibold text-slate-100">Muhammad Barkat Saifee, CEO</div>
+                      <div className="font-semibold text-slate-100">Founder &amp; CEO, Supreme IT Experts</div>
                       <div className="text-slate-300">“Let us stabilize your IT fast — then help you grow.”</div>
                     </div>
                   </div>

@@ -162,17 +162,17 @@ export default function AboutPage() {
   );
   const canonical = `${baseUrl}/about`;
 
-  // JSON-LD (WebSite + BreadcrumbList + WebPage + Person nodes)
+  // JSON-LD (WebSite + BreadcrumbList + WebPage). No Person nodes: the owner asked for no names on the site (Nov 24, 2026).
   const WEBSITE_ID = `${baseUrl}/#website`;
   const BREADCRUMB_ID = `${canonical}#breadcrumb`;
   const WEBPAGE_ID = `${canonical}#webpage`;
 
   const leaders = [
     {
-      name: "Muhammad Barkat Saifee",
+      name: "Our Founder",
       role: "Founder & CEO",
       subtitle: "Leadership • Strategy • Client Success",
-      img: "/team/leader-barkat.png",
+      img: "/team/leader-founder.png",
       bullets: [
         "Business-first IT leadership: clear ownership, priorities, and outcomes",
         "Focus on reliability + accountability so SMB owners always know what’s happening",
@@ -215,13 +215,6 @@ export default function AboutPage() {
           url: new URL("/og-image.png?v=7", baseUrl).toString(),
         },
       },
-      ...leaders.map((p) => ({
-        "@type": "Person",
-        "@id": `${canonical}#${p.name.toLowerCase().replace(/\s+/g, "-")}`,
-        name: p.name,
-        jobTitle: p.role,
-        worksFor: { "@id": BUSINESS_ID },
-      })),
     ],
   };
 
