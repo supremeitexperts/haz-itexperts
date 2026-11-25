@@ -9,7 +9,7 @@ import { site } from "@/lib/siteConfig";
 export const metadata = {
   title: "Allentown Managed IT Support for SMBs",
   description:
-    "Local MSP in Allentown providing 24/7 helpdesk, device management, cybersecurity & backups, and network monitoring. Fast response. Fixed monthly pricing.",
+    "Local MSP in Allentown providing helpdesk, device management, cybersecurity & backups, and network monitoring. Fast response. Fixed monthly pricing.",
   robots: { index: false, follow: true },
 };
 
@@ -77,7 +77,7 @@ export default async function Page({ searchParams }) {
         <div style={kicker}>Managed IT Support • Allentown, PA</div>
         <h1 style={h1}>Keep Your Business Secure, Fast & Supported</h1>
         <p style={hero}>
-          24/7 helpdesk, proactive device management, cybersecurity &amp; backups, and network monitoring — delivered by a local MSP on a predictable monthly plan.
+          Helpdesk, proactive device management, cybersecurity &amp; backups, and network monitoring — delivered by a local MSP on a predictable monthly plan.
         </p>
 
         <div style={{ marginTop: 12 }}>
@@ -116,7 +116,7 @@ export default async function Page({ searchParams }) {
         <h2 style={h2}>Core Services</h2>
         <ul style={list}>
           <li>
-            <strong>24/7 Helpdesk &amp; Device Management</strong> — provisioning, updates, troubleshooting.
+            <strong>Helpdesk &amp; Device Management</strong> — provisioning, updates, troubleshooting.
           </li>
           <li>
             <strong>Cybersecurity</strong> — EDR/AV, patching, MFA, encrypted backups &amp; recovery.

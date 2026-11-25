@@ -62,9 +62,9 @@ const REGIONS = [
     name: "Allentown, Macungie & Emmaus, PA",
     color: "#34d399",
     cities: [
-      { name: "Allentown, PA", slug: "allentown-pa", tier: "A", sla: "P1 ≤ 15 min", pin: [60, 34] },
-      { name: "Macungie, PA", slug: "macungie-pa", tier: "A", sla: "P1 ≤ 15 min", pin: [62, 36] },
-      { name: "Emmaus, PA", slug: "emmaus-pa", tier: "A", sla: "P1 ≤ 15 min", pin: [61, 35] },
+      { name: "Allentown, PA", slug: "allentown-pa", tier: "A", sla: "Next-day answer", pin: [60, 34] },
+      { name: "Macungie, PA", slug: "macungie-pa", tier: "A", sla: "Next-day answer", pin: [62, 36] },
+      { name: "Emmaus, PA", slug: "emmaus-pa", tier: "A", sla: "Next-day answer", pin: [61, 35] },
     ],
   },
 ];
@@ -80,8 +80,8 @@ const SERVICE_HUB = [
   {
     key: "managed",
     title: "Managed IT (SupremeCare™)",
-    desc: "Helpdesk + monitoring + patching with SLA-backed response times.",
-    bullets: ["Helpdesk (P1 ≤ 15 min)", "Monitoring & patching", "Asset & license tracking"],
+    desc: "Helpdesk + monitoring + patching, answered by the next business day.",
+    bullets: ["Helpdesk (next-business-day answer)", "Monitoring & patching", "Asset & license tracking"],
     href: "/services/managed-it",
     icon: ShieldCheck,
     tags: ["Helpdesk", "Monitoring", "Patching"],
@@ -148,7 +148,7 @@ const FAQS = [
   },
   {
     q: "What’s the fastest way to get started?",
-    a: "Book a free 20-minute assessment or request a quote. We’ll confirm scope and share a practical 30–90 day stabilization plan.",
+    a: "Book a free 30-minute IT + AI Checkup or request a quote. We’ll confirm scope and share a practical 30–90 day stabilization plan.",
   },
 ];
 
@@ -231,7 +231,7 @@ function RegionMap({ regions, active }) {
           href="/contact?type=assessment&source=areas"
           className="text-xs rounded-lg px-3 py-1.5 border border-cyan-300/30 text-cyan-300 bg-cyan-400/10 hover:bg-cyan-400/20"
         >
-          Book a 20-min Assessment
+          Book the free 30-min Checkup
         </Link>
       </div>
     </div>
@@ -503,7 +503,7 @@ export default async function AreasPage({ searchParams }) {
                   href="/contact?type=assessment&source=areas-services-hub"
                   className="inline-flex items-center gap-2 text-sm rounded-lg px-3 py-2 border border-cyan-300/30 text-cyan-300 bg-cyan-400/10 hover:bg-cyan-400/20"
                 >
-                  Book a 20-min Assessment <ArrowRight className="h-4 w-4" />
+                  Book the free 30-min Checkup <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
             </div>
@@ -607,7 +607,7 @@ export default async function AreasPage({ searchParams }) {
                   href="/contact?type=assessment&source=areas-region"
                   className="inline-flex items-center gap-2 rounded-lg px-3 py-2 text-sm border border-cyan-300/30 text-cyan-300 bg-cyan-400/10 hover:bg-cyan-400/20"
                 >
-                  Book a 20-min Assessment <ArrowRight className="h-4 w-4" />
+                  Book the free 30-min Checkup <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link
                   href="/contact"
@@ -739,7 +739,7 @@ export default async function AreasPage({ searchParams }) {
                 href="/contact?type=assessment&source=areas-faq"
                 className="inline-flex items-center gap-2 text-sm rounded-lg px-4 py-2 border border-cyan-300/30 text-cyan-300 bg-cyan-400/10 hover:bg-cyan-400/20"
               >
-                Book a 20-min Assessment <ArrowRight className="h-4 w-4" />
+                Book the free 30-min Checkup <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 href="/get-quote"
@@ -765,7 +765,7 @@ export default async function AreasPage({ searchParams }) {
                 href="/contact?type=assessment&source=areas-footer"
                 className="rounded-lg px-5 py-3 font-semibold border border-cyan-300/30 text-cyan-300 bg-cyan-400/10 hover:bg-cyan-400/20"
               >
-                Book a 20-min Assessment
+                Book the free 30-min Checkup
               </Link>
               <Link
                 href="/contact"

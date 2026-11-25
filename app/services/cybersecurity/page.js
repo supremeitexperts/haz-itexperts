@@ -131,7 +131,7 @@ export default function Page() {
       ],
       cta1: { label: "View all areas", href: "/areas" },
       cta2: {
-        label: "Book a 20-min Assessment",
+        label: "Book the free 30-min Checkup",
         href: "/contact?type=assessment&source=cybersecurity-areas",
       },
     },

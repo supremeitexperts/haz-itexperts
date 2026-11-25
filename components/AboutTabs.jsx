@@ -73,7 +73,7 @@ export default function AboutTabs() {
         {tab === "slas" && (
           <div className="grid md:grid-cols-3 gap-4">
             {[
-              ["Response targets", "P1 ≤ 15 min, P2 ≤ 1 hr, P3 same day"],
+              ["Response", "Every request answered by the next business day"],
               ["Tooling included", "EDR/XDR, patching, monitoring, email security, backup/DR"],
               ["Reporting", "Monthly leadership KPIs & recommendations"],
             ].map(([t, d]) => (

@@ -43,6 +43,7 @@ export async function GET() {
     { loc: `${base}/lp/it-ai-checkup`, changefreq: "weekly", priority: 0.8 },
     { loc: `${base}/tools/email-security-check`, changefreq: "monthly", priority: 0.8 },
     { loc: `${base}/lp/email-security-fix`, changefreq: "monthly", priority: 0.8 },
+    { loc: `${base}/reports/lehigh-valley-email-safety`, changefreq: "monthly", priority: 0.8 },
 
     { loc: `${base}/contact`, changefreq: "yearly", priority: 0.6 },
   ];

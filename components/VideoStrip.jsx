@@ -14,7 +14,7 @@ export default function VideoStrip({ items = [] }) {
               <span className="font-medium">Customer story</span>
             </div>
             <div className="hidden md:flex items-center gap-2 text-[11px]">
-              <span className="px-2 py-1 rounded border border-white/10">P1 ≤ 15m</span>
+              <span className="px-2 py-1 rounded border border-white/10">Next-day answer</span>
               <span className="px-2 py-1 rounded border border-white/10">Uptime 99.9%</span>
             </div>
           </div>
